@@ -43,6 +43,8 @@ Edit `com.apple.MobileGestalt.plist` on-device. Capability presets, a full field
 
 **Presets** — Dynamic Island, device model name, boot chime, charge limit, tap to wake, Camera Control, Apple Pencil, Action Button, Collision SOS, Always-On Display, wallpaper parallax, Stage Manager, iPad app compatibility, Siri AI US region, and more. Tick what you want, tap Apply.
 
+**Three Live Activities** — the iPhone Duo Dynamic Island artwork layout enables the three-activity island on other iPhones.
+
 **Field editor** — Search and edit any MobileGestalt key by hand when a preset doesn't cover it.
 
 **Backups** — Every write is backed up automatically. Back up, import, export, and restore at any time.

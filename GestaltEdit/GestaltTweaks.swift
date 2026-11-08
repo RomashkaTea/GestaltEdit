@@ -22,6 +22,7 @@ enum GestaltTweakCategory: String, CaseIterable, Identifiable {
 
 enum GestaltTweakID: String, CaseIterable, Identifiable {
     case supportsDynamicIsland
+    case supportsLiveActivities
     case bootChime
     case chargeLimit
     case tapToWake
@@ -56,6 +57,7 @@ struct GestaltTweakDefinition: Identifiable {
 enum GestaltTweakCatalog {
     static let definitions: [GestaltTweakDefinition] = [
         .init(id: .supportsDynamicIsland, category: .display, title: String(localized: "Enable Dynamic Island Capability"), detail: String(localized: "Nugget's alternate enable method."), values: ["YlEtTtHlNesRBMal1CqRaA": 1]),
+        .init(id: .supportsLiveActivities, category: .display, title: String(localized: "Enable Live Activities Capability"), detail: String(localized: "Enables Live Activities where the system reports the capability as unsupported."), values: ["e4ZSDal1Fg7QfCA7rlNmSQ": 1]),
         .init(id: .alwaysOnDisplay, category: .display, title: String(localized: "Always-On Display"), detail: String(localized: "May increase burn-in risk on unsupported devices."), values: ["2OOJf1VhaM7NxfRok3HbWQ": 1, "j8/Omm6s1lsmTDFsXjsBfA": 1], isRisky: true),
         .init(id: .alwaysOnDisplayVibrancy, category: .display, title: String(localized: "AOD Vibrancy"), detail: String(localized: "Use this when AOD rendering looks incorrect."), values: ["ykpu7qyhqFweVMKtxNylWA": 1]),
         .init(id: .disableParallax, category: .display, title: String(localized: "Disable Wallpaper Parallax"), detail: String(localized: "Stops wallpaper motion based on device movement."), values: ["UIParallaxCapability": 0]),
@@ -93,9 +95,10 @@ struct DynamicIslandOption: Identifiable, Hashable {
         .init(subtype: 2436, title: String(localized: "iPhone X Gestures (SE)")),
         .init(subtype: 2556, title: "iPhone 14 Pro"),
         .init(subtype: 2796, title: "iPhone 14 Pro Max"),
-        .init(subtype: 2622, title: "iPhone 16 Pro"),
+        .init(subtype: 2622, title: "iPhone 16/17/18 Pro"),
         .init(subtype: 2868, title: "iPhone 16 Pro Max"),
-        .init(subtype: 2736, title: "iPhone Air")
+        .init(subtype: 2736, title: "iPhone Air"),
+        .init(subtype: 2034, title: "iPhone Duo (3 Live Activities)")
     ]
 }
 
