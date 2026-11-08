@@ -32,6 +32,13 @@ Edit `com.apple.MobileGestalt.plist` on-device. Capability presets, a full field
 > [!IMPORTANT]
 > GestaltEdit is free and its source is public. Without authorization, you may not sell it.
 
+> [!NOTE]
+> This fork replaces the original `bad_query` path traversal with
+> [worse_query](https://github.com/forcequitOS/worse_query) and adds support for
+> iOS 27.0 through 27.3. It requires an App Group you control. The default is
+> `group.com.romashka.worsequery`, set in `GestaltEdit/GestaltEdit.entitlements`
+> and `GestaltEdit/WorseQueryBridge.m`. Change both if you use a different group.
+
 ## Features
 
 **Presets** — Dynamic Island, device model name, boot chime, charge limit, tap to wake, Camera Control, Apple Pencil, Action Button, Collision SOS, Always-On Display, wallpaper parallax, Stage Manager, iPad app compatibility, Siri AI US region, and more. Tick what you want, tap Apply.
@@ -42,9 +49,10 @@ Edit `com.apple.MobileGestalt.plist` on-device. Capability presets, a full field
 
 ## Requirements
 
-- iOS / iPadOS 27 beta 1–4
+- iOS / iPadOS 27.0 through 27.3 (tested on 27.3 beta 1, build `24C5037i`)
 - Developer Mode enabled
 - A signing tool such as [iLoader](https://github.com/nab138/iloader)
+- An App Group registered for your development team
 
 ## Install
 
@@ -52,10 +60,16 @@ Edit `com.apple.MobileGestalt.plist` on-device. Capability presets, a full field
 2. Install [iLoader](https://iloader.app/), connect your device, and sign in with your Apple ID (used only for local signing).
 3. Import the IPA to sign and install it, then trust the certificate under Settings → General → VPN & Device Management.
 
+## Build
+
+Open the project in Xcode, select your development team, and set an App Group
+you control in both `GestaltEdit/GestaltEdit.entitlements` and
+`GestaltEdit/WorseQueryBridge.m`.
+
 ## Credits
 
 - [Nugget](https://github.com/leminlimez/Nugget) — presets and iPadOS support
-- [FilzaSlop](https://github.com/0xjohnnydev/FilzaSlop), [bad_query](https://github.com/forcequitOS/bad_query), [0xJohnny](https://x.com/0xjohnny) — file access research
+- [FilzaSlop](https://github.com/0xjohnnydev/FilzaSlop), [bad_query](https://github.com/forcequitOS/bad_query), [worse_query](https://github.com/forcequitOS/worse_query), [0xJohnny](https://x.com/0xjohnny) — file access research
 - [neospring](https://github.com/rooootdev/neospring) — respring implementation
 
 Not affiliated with Apple or the projects above.

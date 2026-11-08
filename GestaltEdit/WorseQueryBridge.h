@@ -1,15 +1,15 @@
 //
-//  BadQueryBridge.h
+//  WorseQueryBridge.h
 //  GestaltEdit
 //
-//  Path-based ContainerManager query derived from forcequitOS/bad_query.
+//  Symlink-based ContainerManager integration derived from forcequitOS/worse_query.
 //
 
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BadQueryLease : NSObject
+@interface WorseQueryLease : NSObject
 
 @property(nonatomic, copy, readonly) NSString *targetPath;
 @property(nonatomic, readonly, getter=isActive) BOOL active;
@@ -20,6 +20,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-FOUNDATION_EXPORT BOOL BadQueryBridgeAvailable(void);
+FOUNDATION_EXPORT BOOL WorseQueryBridgeAvailable(void);
 
 NS_ASSUME_NONNULL_END

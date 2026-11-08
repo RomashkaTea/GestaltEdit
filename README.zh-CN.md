@@ -42,7 +42,7 @@
 
 ## 系统要求
 
-- iOS / iPadOS 27 beta 1–4
+- iOS / iPadOS 27.0 至 27.3（已在 27.3 beta 1，构建号 `24C5037i` 上测试）
 - 设备已开启开发者模式
 - 一种签名安装方式，例如 [iLoader](https://github.com/nab138/iloader)
 
