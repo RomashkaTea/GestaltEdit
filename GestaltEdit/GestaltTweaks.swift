@@ -23,6 +23,7 @@ enum GestaltTweakCategory: String, CaseIterable, Identifiable {
 enum GestaltTweakID: String, CaseIterable, Identifiable {
     case supportsDynamicIsland
     case supportsLiveActivities
+    case hasRoundedCornerDisplay
     case bootChime
     case chargeLimit
     case tapToWake
@@ -58,6 +59,7 @@ enum GestaltTweakCatalog {
     static let definitions: [GestaltTweakDefinition] = [
         .init(id: .supportsDynamicIsland, category: .display, title: String(localized: "Enable Dynamic Island Capability"), detail: String(localized: "Nugget's alternate enable method."), values: ["YlEtTtHlNesRBMal1CqRaA": 1]),
         .init(id: .supportsLiveActivities, category: .display, title: String(localized: "Enable Live Activities Capability"), detail: String(localized: "Enables Live Activities where the system reports the capability as unsupported."), values: ["e4ZSDal1Fg7QfCA7rlNmSQ": 1]),
+        .init(id: .hasRoundedCornerDisplay, category: .display, title: String(localized: "Has Rounded Corner Display"), detail: String(localized: "New iOS 27.3 key. Experimental. May change display corner masking."), values: ["XG6DPfxC8emDjEqp8i7P9A": 1], isRisky: true),
         .init(id: .alwaysOnDisplay, category: .display, title: String(localized: "Always-On Display"), detail: String(localized: "May increase burn-in risk on unsupported devices."), values: ["2OOJf1VhaM7NxfRok3HbWQ": 1, "j8/Omm6s1lsmTDFsXjsBfA": 1], isRisky: true),
         .init(id: .alwaysOnDisplayVibrancy, category: .display, title: String(localized: "AOD Vibrancy"), detail: String(localized: "Use this when AOD rendering looks incorrect."), values: ["ykpu7qyhqFweVMKtxNylWA": 1]),
         .init(id: .disableParallax, category: .display, title: String(localized: "Disable Wallpaper Parallax"), detail: String(localized: "Stops wallpaper motion based on device movement."), values: ["UIParallaxCapability": 0]),
